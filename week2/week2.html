@@ -1,0 +1,127 @@
+join.lore.com/TGYFZ2
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Blocks</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.2/build/cssreset/cssreset-min.css">
+    <style>
+    body {
+        font-family: sans-serif;
+    }
+    .col {
+        width: 350px;
+        background: #ddd;
+        overflow: hidden;
+    }
+    .img {
+        margin: 0 15px 0 0;
+        float: left;
+    }
+    .media, .bd {
+        overflow: hidden;
+    }
+    .media + .media {
+        border-top: 1px solid blue;
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+
+    .media.featured .img {
+        float: none;
+    }
+
+    .media h2 {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .media .media {
+        margin-top: 8px;
+    }
+
+    .media.comment input {
+        border: 1px solid #333;
+        padding: 0 3px;
+        line-height: 1.4em;
+        border-radius: 5px;
+        width: 90%;
+    }
+
+    .media.comment button {
+        background: black;
+        color: white;
+    }
+    .media.comment button:focus {
+        background: red;
+
+    }
+    .media.comment button:active {
+        background: hsl(310, 100%, 30%);
+    }
+
+    </style>
+</head>
+<body>
+    <div class="col">
+        <div class="media featured">
+            <span class="img">
+                <img src="http://www.placekitten.com/350/125">
+            </span>
+            <div class="bd">
+                <h2>Featured!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. </p>
+            </div>
+        </div>
+        <div class="media">
+            <span class="img">
+                <img src="http://www.placekitten.com/75/75">
+            </span>
+            <div class="bd">
+                <h2>Awesome Something</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. </p>
+                <div class="media comment">
+                    <span class="img">
+                        <img src="http://www.placekitten.com/50/50">
+                    </span>
+                    <div class="bd">
+                        <form>
+                            <input name="comment"><button>Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="media comment">
+                    <span class="img">
+                        <img src="http://www.placekitten.com/50/49">
+                    </span>
+                    <div class="bd">
+                        I said Hai!!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="media">
+            <span class="img">
+                <img src="http://www.placekitten.com/75/75">
+            </span>
+            <div class="bd">
+                <h2>Even Better</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. </p>
+            </div>
+        </div>
+    </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. </p>
+</body>
+</html>

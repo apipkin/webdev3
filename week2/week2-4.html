@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.2/build/cssreset/cssreset-min.css">
+<style>
+.col {
+    width: 370px;
+    margin: 10px;
+}
+ul {
+    overflow: hidden;
+}
+li {
+        float: left;
+        margin-right: 1px;
+        cursor: pointer;
+        z-index: 1;
+        height: 2em;
+        line-height: 2em;
+        border: 1px solid #bbb;
+        padding:0 1em;
+        position:relative;
+        top: 2px;
+}
+li.active {
+    z-index: 3;
+    border-bottom-color: white;
+    top: 0px;
+}
+.tabContent {
+        position: relative;
+        z-index: 2;
+        background: white;
+        top: -1px;
+}
+.tabContent > div {
+        border: 1px solid #ddd;
+        padding: 5px 12px 5px 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+}
+.tabContent > div.active {
+    display: block;
+}
+</style>
+</head>
+<body>
+    <div class="col">
+
+        <div class="tabView">
+            <!-- Tabs -->
+            <ul>
+                <li><a href="#tab-1">Tab 1</a></li>
+                <li class="active"><a href="#tab-1">Tab 2</a></li>
+                <li><a href="#tab-1">Tab 3</a></li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tabContent">
+                <div id="tab-1" class="">1> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+                <div id="tab-2" class="active">2> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+                <div id="tab-3" class="">3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

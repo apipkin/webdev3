@@ -1,0 +1,133 @@
+@import url("./fonts/font-awesome/font-awesome.css");
+
+html {
+    background: #000000 url(../assets/background.jpg) center top no-repeat;
+}
+
+body {
+    text-align: center;
+}
+
+.wrapper {
+    background: #ffffff;
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hd {
+    position: relative;
+    padding-top: 60px;
+}
+
+.hd .user {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 24px;
+    line-height: 24px;
+    background: #000000;
+    width: 100%;
+    text-align: right;
+}
+.hd .login {
+    padding-right: 150px;
+}
+.hd .login a {
+    color: #efefef;
+    text-decoration: none;
+}
+.hd .login a:hover {
+    text-decoration: underline;
+}
+.hd .cart {
+    background: url(../assets/ribbon.png) center top repeat-y;
+    width: 111px;
+    height: 85px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+}
+.hd .cart:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #aaaaaa;
+    border-width: 0px 55.5px 20px;
+}
+.hd .cart:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ffffff;
+    border-width: 0px 55.5px 20px;
+}
+
+.hd .cart .items {
+    position: relative;
+    padding-top: 34px;
+    top: 23px;
+}
+.hd .cart .items:before {
+    content: '\f07a';
+    font-family: FontAwesome;
+    font-size: 26px;
+    color: #efefef;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.hd .logo {
+    text-align: center;
+    background: url(../assets/logo.png) center top no-repeat;
+    height: 81px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.hd .tagline {
+    text-align: center;
+}
+.hd .search {
+    position: absolute;
+    right: 20px;
+    top: 135px;
+}
+.hd .search form {
+    border: 1px solid #999999;
+}
+.hd .search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    line-height: 1.6em;
+    padding-right: 25px;
+    width: 175px;
+}
+.hd .search .submit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 32px;
+    background: red;
+    padding-right: 0px;
+    overflow: hidden;
+    text-indent: -9999px;
+}

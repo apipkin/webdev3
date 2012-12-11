@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.3/build/cssreset/cssreset-min.css">
+
+<style>
+body {
+    margin: 20px;
+}
+
+.box {
+    display: inline-block;
+}
+.box img {
+    padding: 4px 10px;
+}
+.tag {
+    border-top: 1px solid black;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.1s cubic-bezier(.61, .14, .19, .99);
+}
+.tag span {
+    background: #333;
+    color: #fff;
+    line-height: 25px;
+    padding: 0px 10px;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+    -webkit-transition: top 0.1s linear;
+}
+.box:hover .tag {
+    opacity: 1;
+    -webkit-transition: opacity 0.1s cubic-bezier(.61, .14, .19, .99);
+}
+.box:hover span {
+    top: 0;
+    -webkit-transition: top 0.3s linear;
+}
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <img src="http://placekitten.com/100/100">
+        <div class="tag"><span>Add to Cart</span></div>
+    </div>
+</body>
+</html>

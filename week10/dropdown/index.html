@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.3/build/cssreset/cssreset-min.css">
+
+<style>
+body {
+    margin: 20px;
+}
+.nav {
+    border: 1px solid #aaa;
+    border-width: 1px 0;
+    padding: 4px 0;
+    position: relative;
+    z-index: 100;
+}
+.nav li {
+    display: inline-block;
+    position: relative;
+}
+.nav li {
+    border-left: 1px solid #aaa;
+}
+.nav li:first-child {
+    border-left-width: 0;
+}
+.nav li a {
+    line-height: 24px;
+    height: 24px;
+}
+.nav li a span {
+    display: block;
+    padding: 0 8px;
+}
+.sub {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 24px;
+    padding-top: 4px;
+}
+.nav li:hover .sub {
+    display: block;
+}
+.nav .sub li {
+    display: block;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-top-width: 0;
+}
+.nav .sub li:first-child {
+    border-top: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#"><span>Home</span></a></li><!--
+            --><li><a href="#"><span>About Us</span></a></li><!--
+            --><li><a href="#"><span>Widgets</span></a>
+                <ul class="sub">
+                    <li><a href="#"><span>Apples</span></a></li>
+                    <li><a href="#"><span>Banana</span></a></li>
+                    <li><a href="#"><span>Carrots</span></a></li>
+                </ul>
+            </li><!--
+            --><li><a href="#"><span>Contact Us</span></a></li>
+        </ul>
+    </div>
+</body>
+</html>

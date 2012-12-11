@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.3/build/cssreset/cssreset-min.css">
+
+<style>
+body {
+    margin: 40px;
+}
+.slideshow {
+    border: 1px solid blue;
+    width: 500px;
+    height: 250px;
+    position: relative;
+}
+.panel {
+    background: rgba(0,0,0,0.3);
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.panel .liner {
+    padding: 10px;
+}
+.panel.active {
+    opacity: 1;
+}
+
+
+.controls {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: yellow;
+}
+.controls a {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: red;
+    text-indent: -999px;
+    overflow: hidden;
+    top: 115px;
+}
+.controls .prev {
+    left: -30px;
+}
+.controls .next {
+    right: -30px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="slideshow">
+        <div class="panels">
+            <div class="panel"><div class="liner">
+                <p><strong>Panel 1</strong></p>
+                <p><img src="http://lorempixel.com/200/101"></p>
+            </div></div>
+            <div class="panel"><div class="liner">
+                <p><strong>Panel 2</strong></p>
+                <p><img src="http://placekitten.com/200/100"></p>
+            </div></div>
+            <div class="panel"><div class="liner">
+                <p><strong>Panel 3</strong></p>
+                <p><img src="http://lorempixel.com/200/100"></p>
+            </div></div>
+            <div class="panel"><div class="liner">
+                <p><strong>Panel 4</strong></p>
+                <p><img src="http://flickholdr.com/200/100"></p>
+            </div></div>
+        </div>
+        <div class="controls">
+            <a href="#" class="prev">Previous</a>
+            <a href="#" class="next">Next</a>
+        </div>
+    </div>
+    <script>
+    $(function(){
+
+        var slideshow = $('.slideshow'),
+            prev = $('.controls .prev'),
+            next = $('.controls .next'),
+            current = $('.slideshow .panel.active');
+
+        if (current.length < 1) {
+            slideshow.find('.panel').first().addClass('active');
+            current = $('.slideshow .panel.active');
+        }
+
+        prev.click(function(e) {
+            e.preventDefault();
+            current.removeClass('active');
+            current = current.prev();
+            if (current.length < 1) {
+                current = slideshow.find('.panel').last();
+            }
+            current.addClass('active');
+        });
+
+        next.click(function(e) {
+            e.preventDefault();
+            current.removeClass('active');
+            current = current.next();
+            if (current.length < 1) {
+                current = slideshow.find('.panel').first();
+            }
+            current.addClass('active');
+        })
+    });
+    </script>
+</body>
+</html>
